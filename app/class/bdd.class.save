@@ -1,0 +1,31 @@
+<?php 
+
+class BddClass {
+	private static $bdd = false;
+    private static $error = false;
+
+    public static function int() {
+        $hostname = "localhost";
+        $dbname = "common-database";
+        $username = "root";
+        $password = "monti_l";
+
+        try {
+        	$co = new PDO("mysql:host=$hostname;dbname=" . $dbname . ";charset=utf8", $username, $password);
+            $co->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            self::$bdd = $co;
+        } catch (PDOException $e) {
+        	$co = $e->getMessage();
+            self::$error = $co;
+        }
+    }
+
+    public static function error() {
+    	return self::$error;
+    }
+
+    public static function bdd() {
+    	return self::$bdd;
+    }
+}
+BddClass::int();

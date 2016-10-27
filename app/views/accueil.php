@@ -1,0 +1,2 @@
+<h1>Bienvenue sur TwittaWac !</h1>
+<p>Connectez-vous à vos amis et d'autres personnes fascinantes. Recevez des mises à jour instantanées sur les choses qui vous intéressent. Et regardez les événements se dérouler, en temps réel, sous tous les angles.</p>
